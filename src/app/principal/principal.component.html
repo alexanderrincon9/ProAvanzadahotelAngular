@@ -1,0 +1,133 @@
+<app-menu></app-menu>
+
+<section id="banner">
+    <div class="container">
+        <app-formularioreservas></app-formularioreservas>
+    </div>
+</section>
+
+<section class="container mt-5">
+    <div class="row mb-4" id="servicios">
+        <div class="col-12">
+            <h3 class="text-muted">Hoteles InterGalacticos Medellin | Antioquia</h3>
+            <hr>
+            <p>
+                El Hotel intergalactico está situado en la zona de el Poblado y ofrece vistas a la ciudad de Medellín.
+                Ofrece
+                alojamientos de lujo, conexión WiFi gratuita, un spa y una piscina climatizada semiolímpica.
+                Las habitaciones del Hotel intergalactico son amplias y cuentan con TV LCD con canales por cable y
+                conexión
+                gratuita a internet de alta velocidad. Algunas incluyen una cocina totalmente equipada y una zona de
+                estar.
+                Además, el
+                servicio de habitaciones está disponible todos los días, las 24 horas. El establecimiento sirve un
+                desayuno
+                buffet abundante en La Brasserie. Asimismo, los huéspedes pueden degustar
+                platos a la parrilla y pizzas hechas al horno de piedra en el restaurante Fogón de Piedra, o bien pueden
+                tomar
+                platos
+                creativos y vinos exquisitos, que elabora cocina exclusiva. Entre las instalaciones
+                de bienestar se incluyen una bañera de hidromasaje, un solárium y una sauna seca y de
+                vapor. También hay un gimnasio y varios tratamientos de masaje disponibles. Además, el mostrador de
+                información
+                turística puede organizar excursiones y actividades por la zona. El hotel se encuentra a 30 km del
+                aeropuerto
+                José María Córdova y a poca distancia en coche del Museo de
+                Antioquía. Se facilita aparcamiento gratuito.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 mb-5">
+
+        <div class="col mb-2">
+            <div class="card shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <img src="../../../assets/img/server1.jpg" class="img-fluid rounded-start h-100 w-100"
+                            alt="...">
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Comida internacional</h5>
+                            <p class="card-text">Platos de comida nacional e internacional de alta calidad</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-2">
+            <div class="card shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <img src="../../../assets/img/server2.jpg" class="img-fluid rounded-start h-100 w-100"
+                            alt="...">
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Gimnasio 24/7</h5>
+                            <p class="card-text">Contamos con instructores y maquinas para el ejercicio físico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-2">
+            <div class="card shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <img src="../../../assets/img/server3.jpg" class="img-fluid rounded-start h-100 w-100"
+                            alt="...">
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Piscina semi olimpica</h5>
+                            <p class="card-text">Contamos con amplais zonas de recreo para su disfrute</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-2">
+            <div class="card shadow">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <img src="../../../assets/img/server5.jpg" class="img-fluid rounded-start h-100 w-100"
+                            alt="...">
+                    </div>
+                    <div class="col-md-4 align-self-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Centro de convenciones</h5>
+                            <p class="card-text">Ofrecemos todas las instalacioens necesarias para sus reuniones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row row-cols-1 row-cols-md-4">
+        <div class="col" *ngFor="let habitacion of listaHabitaciones">
+            <div class="card h-100">
+                <img src="{{habitacion.fotografia}}" class="card-img-top h-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{habitacion.nombre}}</h5>
+                  <p class="card-text">{{habitacion.descripcion}}</p>
+                  <p class="card-text">Precio Adulto: {{habitacion.precioAdulto}} Precio Niños: {{habitacion.precioNino}}</p>
+                  <a href="#" class="card-link">Card link</a>                  
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<footer>
+    <app-footer></app-footer>
+</footer>

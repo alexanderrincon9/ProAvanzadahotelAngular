@@ -1,0 +1,21 @@
+#banner{
+   background-image: url("../../assets/img/banner2.jpg"); 
+   background-size: cover;
+   padding: 10% 2% 40% 2%;
+   background-position: top center;
+   position:relative;
+   z-index: 1;
+}
+
+#banner::after{
+    content:'';
+    position:absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity:.45;
+    z-index: -1;
+    
+}
